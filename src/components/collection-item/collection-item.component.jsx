@@ -1,7 +1,7 @@
 import React from 'react';
 import './collection-item.scss';
 
-export const CollectionItem = ({id, name, price, imageUrl})=>(
+export const CollectionItem = ({name, price, imageUrl})=>(
     <div className="collection-item">
         <div className="image"
         style={{backgroundImage: `url(${imageUrl})`}}>
