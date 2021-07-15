@@ -59,7 +59,7 @@ class SignUp extends React.Component{
                 <span>
                     Sign up with your email and password 
                 </span>
-                <form className="sign-up-form" onSubmit = "handleSubmit">
+                <form className="sign-up-form" onSubmit = {this.handleSubmit}>
                     <FormInput
                     type="text"
                     name="displayName"
