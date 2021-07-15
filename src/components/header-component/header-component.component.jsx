@@ -18,7 +18,7 @@ export const HeaderComponent = ({currentUser}) => (
             </Link>
             {
                 currentUser ?
-                <div class="option" onClick={()=> auth.signOut()}>SIGN OUT</div> :
+                <div className="option" onClick={()=> auth.signOut()}>SIGN OUT</div> :
                 <Link className='option' to='/signinandsignup'>
                     SIGN IN
                 </Link>
