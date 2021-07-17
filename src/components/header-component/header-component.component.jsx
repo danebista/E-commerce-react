@@ -5,7 +5,7 @@ import {ReactComponent as Logo} from '../../assets/shoplogo.svg';
 import './header-component.scss'
 import {auth} from '../../firebase/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.components';
-
+import CartOpener from '../cart/cart.component'
 
 const HeaderComponent = ({currentUser}) => (
     <div className="header">
@@ -28,6 +28,7 @@ const HeaderComponent = ({currentUser}) => (
             }
             <CartIcon />
         </div>
+        <CartOpener />
     </div>
 )
 
