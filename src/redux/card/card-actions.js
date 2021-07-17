@@ -19,3 +19,10 @@ export const removeItem = item =>(
         payload: item
     }
 )
+
+export const removeEachItem = item =>(
+    {
+        type: CardActionTypes.REMOVE_ITEM,
+        payload: item
+    }
+)

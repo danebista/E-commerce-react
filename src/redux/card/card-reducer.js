@@ -1,5 +1,5 @@
  import {CardActionTypes} from './card-types';
- import {addItemToCart} from './card-util';
+ import {addItemToCart, removeItemToCart} from './card-util';
 
 const INITIAL_STATE = {
     hidden : true,
@@ -21,6 +21,12 @@ const INITIAL_STATE = {
                 cardItems: addItemToCart(state.cardItems, action.payload)
             }
         
+        case CardActionTypes.REMOVE_ITEM:
+            return {
+                ...state,
+                cardItems: removeItemToCart(state.cardItems, action.payload)
+            }
+
         case CardActionTypes.CARD_REMOVE:
             return {
                 ...state,
