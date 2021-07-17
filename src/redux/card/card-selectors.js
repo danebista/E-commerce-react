@@ -13,3 +13,8 @@ export const selectCountItems = createSelector(
     acc + cardItems.quantity, 0
     )
 )
+
+export const selectCartHidden = createSelector(
+    [selectCart],
+    (card)=> card.hidden
+)

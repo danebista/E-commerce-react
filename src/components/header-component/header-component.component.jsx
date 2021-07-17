@@ -6,7 +6,9 @@ import './header-component.scss'
 import {auth} from '../../firebase/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.components';
 import CartOpener from '../cart/cart.component'
-
+import { createStructuredSelector} from 'reselect';
+import { selectCurrentUser } from '../../redux/user/user-selector';
+import {selectCartHidden} from '../../redux/card/card-selectors';
 
 const HeaderComponent = ({currentUser, hidden}) => (
     <div className="header">
@@ -35,8 +37,8 @@ const HeaderComponent = ({currentUser, hidden}) => (
     </div>
 )
 
-const mapStateToProps= ({user:{currentUser}, card: {hidden} } )=> ({
-    currentUser,
-    hidden
+const mapStateToProps= createStructuredSelector ({
+    currentUser: selectCurrentUser,
+    hidden : selectCartHidden
 });
 export default connect(mapStateToProps)(HeaderComponent);
