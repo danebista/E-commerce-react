@@ -12,3 +12,10 @@ export const addItem = item =>(
         payload: item
     }
 )
+
+export const removeItem = item =>(
+    {
+        type: CardActionTypes.CARD_REMOVE,
+        payload: item
+    }
+)

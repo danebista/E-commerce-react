@@ -20,7 +20,12 @@ const INITIAL_STATE = {
                 ...state,
                 cardItems: addItemToCart(state.cardItems, action.payload)
             }
-
+        
+        case CardActionTypes.CARD_REMOVE:
+            return {
+                ...state,
+                cardItems:  state.cardItems.filter(cardItem => cardItem.id !== action.payload.id)
+            }
         default:
             return state;
     }
