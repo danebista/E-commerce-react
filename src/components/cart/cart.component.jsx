@@ -7,8 +7,9 @@ import CartItem from '../cart-item/cartitem.component';
 import {selectCartItems} from '../../redux/card/card-selectors';
 import {createStructuredSelector} from 'reselect';
 import { withRouter } from 'react-router-dom';
+import {toggleCardHidden} from '../../redux/card/card-actions.js';
 
-const CartOpener= ({cardItems, history})=>(
+const CartOpener= ({cardItems, history, dispatch})=>(
     <div className="cart-dropdown">
         <div className="cart-items">
             {
@@ -17,7 +18,9 @@ const CartOpener= ({cardItems, history})=>(
                 :<span className="empty-message">Your cart is empty</span>
             }
         </div> 
-        <CustomButton onClick = {()=> history.push('/checkout')}>Go to Checkout</CustomButton>
+        <CustomButton onClick = {()=>{
+                     history.push('/checkout')
+                     dispatch(toggleCardHidden())}}>Go to Checkout</CustomButton>
     </div>
 )
 
