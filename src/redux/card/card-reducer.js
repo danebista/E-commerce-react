@@ -1,4 +1,5 @@
  import {CardActionTypes} from './card-types';
+ import {addItemToCart} from './card-util';
 
 const INITIAL_STATE = {
     hidden : true,
@@ -17,7 +18,7 @@ const INITIAL_STATE = {
         case CardActionTypes.CARD_USER_ADD:
             return {
                 ...state,
-                cardItems: [...state.cardItems, action.payload]
+                cardItems: addItemToCart(state.cardItems, action.payload)
             }
 
         default:
