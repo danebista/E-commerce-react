@@ -2,7 +2,7 @@ import React from 'react';
 import './cart-icon.scss';
 import { connect } from 'react-redux';
 import {toggleCardHidden} from '../../redux/card/card-actions';
-
+import {selectCountItems} from '../../redux/card/card-selectors'
 import {ReactComponent as ShoppingIcon} from '../../assets/cart.svg';
 
 
@@ -13,9 +13,9 @@ import {ReactComponent as ShoppingIcon} from '../../assets/cart.svg';
     </div> 
  )
 
- const mapStatetoProps= ({card: {cardItems}}) =>(
+ const mapStatetoProps= (state) =>(
     {
-        itemCount : cardItems.reduce((acc, cardItem)=> acc + cardItem.quantity,0)
+        itemCount : selectCountItems(state)
     }
  )
 
