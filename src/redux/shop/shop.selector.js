@@ -15,9 +15,5 @@ export const selectCollectionForPreview = createSelector(
 export const selectCollection = collectionUrlParams=>(
     createSelector(
         [selectShopItems],
-        collections => collections.find(collection=> {
-        
-           return collection[collectionUrlParams]
-        })
-    )
+        collections => collections[collectionUrlParams])
 )
