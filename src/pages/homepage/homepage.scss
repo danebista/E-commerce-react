@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid white;
     margin: 0 7.5px 15px;
 
     &:first-child{
@@ -38,19 +38,20 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid black;
+        border: 1px solid white;
+    }
+
+    .subtitle{
+        font-weight: lighter;
+        font-size: 16px;
+        color: #ededed;
     }
 
     .hats{
         font-weight: bold;
         margin-bottom: 6px;
         font-size: 22px;
-        color: #4a4a4a;
-    }
-
-    .subtitle{
-        font-weight: lighter;
-        font-size: 16px;
+        color: white;
     }
 
 }

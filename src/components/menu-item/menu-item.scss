@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid white;
     margin: 0 7.5px 15px;
     overflow: hidden;
 
@@ -48,9 +48,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid black;
+        border: 1px solid white;
         position: absolute;
-        background-color: white;
+        background-color: #2B2B2B;
         opacity: 0.6;
     }
 
@@ -58,7 +58,7 @@
         font-weight: bold;
         margin-bottom: 6px;
         font-size: 22px;
-        color: #4a4a4a;
+        color: #ededed;
         z-index: 1;
         font-weight: 900;
     }
