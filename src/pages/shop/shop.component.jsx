@@ -7,7 +7,6 @@ import CategoryPage from '../category/category.component';
 import {firestore, convertCollectionsSnapshotToMap} from '../../firebase/firebase.utils'
 import {updateCollections} from '../../redux/shop/shop.actions';
 import withSpinner from '../../components/with-spinner/with-spinner.component';
-console.log(withSpinner);
 const CollectionOverviewWithSpinner = withSpinner(CollectionOverview);
 const CollectionPageWithSpinner = withSpinner(CategoryPage);
 
@@ -21,7 +20,6 @@ class Shop extends React.Component{
         const collectionRef = firestore.collection('collections');
         collectionRef.onSnapshot(async snapshot => {
             const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-           console.log(collectionsMap)
             updateCollections(collectionsMap);
             
             this.setState({loading: false});
