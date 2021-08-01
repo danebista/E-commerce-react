@@ -13,24 +13,24 @@ const INITIAL_STATE = {
             linkUrl: 'shop/sneakers'
         },
         {
-            title: 'Trousers',
+            title: 'Jackets',
             id: 3,
-            image: 'https://images.freeimages.com/images/large-previews/728/jeans-1421398.jpg',
-            linkUrl: 'shop/trousers'
+            image: 'https://images.freeimages.com/images/large-previews/fc4/camouflage-1426167.jpg',
+            linkUrl: 'shop/jackets'
         },
         {
-            title: 'Men',
+            title: 'Mens',
             id: 4,
             image: 'https://images.freeimages.com/images/large-previews/67c/man-1438092.jpg',
             size: 'large',
-            linkUrl: 'shop/men'
+            linkUrl: 'shop/mens'
         },
         {
-            title: 'Women',
+            title: 'Womens',
             id: 5,
             image: 'https://images.freeimages.com/images/large-previews/f8a/nevin-1435774.jpg',
             size: 'large',
-            linkUrl: 'shop/women'
+            linkUrl: 'shop/womens'
         }
     ]
 }

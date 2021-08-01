@@ -23,12 +23,14 @@ const HeaderComponent = ({currentUser, hidden}) => (
                 CONTACT
             </OptionLink>
             {
+                
                 currentUser ?
                 <OptionDiv className="option" onClick={()=> auth.signOut()}>SIGN OUT</OptionDiv> :
                 <OptionLink className='option' to='/signinandsignup'>
                     SIGN IN
                 </OptionLink>
             }
+            <OptionDiv>{console.log(currentUser)}</OptionDiv>
             <CartIcon />
         </OptionsContainer>
         {hidden? null
