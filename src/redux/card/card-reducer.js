@@ -32,6 +32,12 @@ const INITIAL_STATE = {
                 ...state,
                 cardItems:  state.cardItems.filter(cardItem => cardItem.id !== action.payload.id)
             }
+        case CardActionTypes.CLEAR_CART:
+            return {
+                ...state,
+                cardItems: []
+            }
+            
         default:
             return state;
     }

@@ -6,7 +6,7 @@ import Shop from './pages/shop/shop.component.jsx';
 import {Homepage} from './pages/homepage/homepage.component.jsx';
 import HeaderComponent from './components/header-component/header-component.component.jsx';
 import {SignInAndSignUpPage} from './pages/sign-up_and_sign-in/sign-up_and_sing-in.component.jsx'
-import  {setCurrentUser, CheckUserSession} from './redux/user/user-actions';
+import  { CheckUserSession} from './redux/user/user-actions';
 import {selectCurrentUser} from './redux/user/user-selector';
 import { createStructuredSelector} from 'reselect';
 import CheckoutPage from './pages/checkout/checkout.component.jsx';
